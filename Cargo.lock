@@ -114,7 +114,7 @@ dependencies = [
 ]
 
 [[package]]
-name = "korean-input-benchmark"
+name = "korean-ime-benchmark"
 version = "0.1.0"
 dependencies = [
  "gdk-sys",
