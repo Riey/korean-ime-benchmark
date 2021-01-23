@@ -4,21 +4,19 @@
 ## Run yourself
 
 ```sh
-./bench.sh
+./bench.sh # then press some enter keys
 ```
 
 ## Result
 
 ```
 kime
-elapsed: 30ms
-text: 테스트문자열테스트문자열테스트문자열테스트문자열테스트문자열테스트문자열테스트문자열테스트문자열테스트문자열테스트문자열
+45030 clocks
+
 uim
-elapsed: 75ms
-text: 테스트문자열테스트문자열테스트문자열테스트문자열테스트문자열테스트문자열테스트문자열테스트문자열테스트문자열테스트문자열
-# not yet supported
+128249 clocks
+
 fcitx
-elapsed: 5ms
-text:  xptmxmanswkdufxptmxmanswkdufxptmxmanswkdufxptmxmanswkdufxptmxmanswkdufxptmxmanswkdufxptmxmanswkdufxptmxmanswkdufxptmxmanswkdufxptmxmanswkduf
+89567 clocks
 ```
 

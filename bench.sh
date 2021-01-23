@@ -1,20 +1,24 @@
-#!/bin/sh
+#!/bin/bash
 
-export GTK_IM_MODULE=kime
+set -e
 
-echo kime
+mkdir -pv build result
 
-cargo run --release 2>/dev/null
+cd build
 
-export GTK_IM_MODULE=uim
+cmake .. -DCMAKE_BUILD_TYPE=Release
 
-echo uim
+make
 
-cargo run --release 2>/dev/null
+cd ../result
 
-export GTK_IM_MODULE=fcitx
+function run {
+    echo Start bench $1
+    GTK_IM_MODULE=$1 ../build/bench 2> /dev/null > $1.ret
+}
 
-echo fcitx
+run kime
+run uim
+run fcitx
 
-cargo run --release 2>/dev/null
-
+echo END
