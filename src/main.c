@@ -30,14 +30,6 @@ static key keys[] = {{53, GDK_KEY_x, 0},
                      },
                      {58, GDK_KEY_m, 0}};
 
-void send_event(GdkEventKey *kev, key key) {
-  kev->send_event = TRUE;
-  kev->hardware_keycode = 100;
-  kev->keyval = GDK_KEY_Henkan_Mode;
-  kev->state = 0;
-  gdk_event_put((GdkEvent *)kev);
-}
-
 gboolean key_press(GtkWidget *text_view, GdkEventKey *get_ev) {
   if (get_ev->send_event) {
     if (get_ev->keyval == GDK_KEY_Return) {
@@ -67,8 +59,8 @@ gboolean key_press(GtkWidget *text_view, GdkEventKey *get_ev) {
     {
       GdkEventKey *kev = &ev->key;
       kev->send_event = TRUE;
-      kev->hardware_keycode = 100;
-      kev->keyval = GDK_KEY_Henkan_Mode;
+      kev->hardware_keycode = 102;
+      kev->keyval = GDK_KEY_Muhenkan;
       kev->state = 0;
       gdk_event_put(ev);
     }
